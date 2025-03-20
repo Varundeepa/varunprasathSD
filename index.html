@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Login Container (Modern Card UI) */
+        .login-container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect on Card */
+        .login-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #292929;
+            color: #ffffff;
+            outline: none;
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Smooth Hover Effect */
+        button:hover {
+            background-color: #e68900;
+            transform: scale(1.05);
+        }
+
+        /* Error Message */
+        #errorMessage {
+            margin-top: 10px;
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Responsive for Mobile & Desktop */
+        @media (max-width: 400px) {
+            .login-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="errorMessage"></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>
